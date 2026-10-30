@@ -1,0 +1,15 @@
+{
+  "url": "https://good-dog-dash.vercel.app/",
+  "httpStatus": 200,
+  "checkedAt": "2026-10-30T17:07:41.796Z",
+  "gitCommit": "a624c107641723d7509251c8262a371ad39b84d7",
+  "deploymentId": "dpl_5CMiRhhMQ6ZdKWuPPQaje1FDmq7F",
+  "deploymentSource": "GitHub push to main",
+  "githubCommitStatus": "success",
+  "passed": [
+    "Public production game loads without Vercel login",
+    "Customization works",
+    "Game starts and pauses",
+    "No JavaScript exceptions"
+  ]
+}

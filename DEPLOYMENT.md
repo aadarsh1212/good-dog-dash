@@ -20,7 +20,9 @@ The private GitHub repository is now connected to Vercel. The connection command
 - Production branch: `main`.
 - GitHub App access: sufficient to connect the private repository.
 
-This documentation update is being pushed to verify the first automatic Git-triggered deployment. Build success is not implied by connection success; inspect the deployment associated with this commit before treating that verification as complete.
+Automatic deployment is verified end-to-end. Pushing commit `a624c107641723d7509251c8262a371ad39b84d7` to `main` triggered production deployment `dpl_5CMiRhhMQ6ZdKWuPPQaje1FDmq7F` without a CLI deploy. Vercel reports READY, and GitHub's Vercel commit status reports success / "Deployment has completed". The production domain was promoted to that deployment.
+
+[GitHub deployment browser results](artifacts/ui/github-deployment-test-results.json) confirm public HTTP 200, working customization, game start/pause, and no JavaScript exceptions. No additional account authorization is required for this connection.
 
 ## Build and deployment
 

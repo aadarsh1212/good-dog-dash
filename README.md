@@ -4,6 +4,10 @@ A standalone 2D side-scrolling runner with a customizable cartoon dog. A warm pa
 
 ## Play
 
+**[Play the public game](https://good-dog-dash.vercel.app/)** · [GitHub repository](https://github.com/aadarsh1212/good-dog-dash) (private).
+
+The initial Vercel production deployment is live and browser-tested. Automatic deployment from GitHub is pending Vercel GitHub App repository access; see [deployment status and setup](DEPLOYMENT.md).
+
 Open [index.html](index.html) in a modern browser. No build, server, account, image downloads, or runtime package installation is required. The optional Google Fonts stylesheet falls back to local sans-serif fonts offline.
 
 The local development server is available at [localhost:8081](http://localhost:8081/). To restart it, run `npm start` (or `node serve.cjs`) from this game's directory with Node installed. The dependency-free [local server](serve.cjs) uses Brotli/gzip compression and disables stale asset caching; compression resolved stalled asset transfers observed with this host's uncompressed development server. It is bound only to this computer, not exposed to the network. Other workspace servers on ports 8000 and 8765 were left untouched. No server is necessary for direct HTML play.

@@ -1,0 +1,7 @@
+# Only browser source and the static build configuration are deployment inputs.
+/artifacts/
+/tests/
+/node_modules/
+/dist/
+/serve.cjs
+*.md

@@ -1,0 +1,14 @@
+{
+  "url": "https://good-dog-dash.vercel.app/",
+  "httpStatus": 200,
+  "testedAt": "2026-10-30T16:54:29.587Z",
+  "productionCode": true,
+  "passed": [
+    "Public access without Vercel login",
+    "Live dog customization",
+    "Start and pause",
+    "Outfit persistence across reload",
+    "No JavaScript exceptions"
+  ],
+  "automaticGitDeployment": false
+}

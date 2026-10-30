@@ -1,0 +1,24 @@
+{
+  "url": "http://localhost:8081/",
+  "productionCode": true,
+  "passed": [
+    "Three full localhost loads with real unmodified JavaScript",
+    "Customization and game start",
+    "Pause control",
+    "No JavaScript exceptions"
+  ],
+  "scriptResponses": [
+    {
+      "status": 200,
+      "encoding": "br"
+    },
+    {
+      "status": 200,
+      "encoding": "br"
+    },
+    {
+      "status": 200,
+      "encoding": "br"
+    }
+  ]
+}

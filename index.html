@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fcf4e8">
+  <title>Good Dog Dash — A neighborhood adventure</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- A dependency-free, responsive runner. Canvas handles the world; HTML keeps the UI accessible. -->
+  <main class="app">
+    <header class="masthead">
+      <a class="brand" href="./" aria-label="Good Dog Dash home"><span class="brand-mark" aria-hidden="true">✦</span><span>little joy<span class="brand-studio">GAMES FOR A GOOD DAY</span></span></a>
+      <div class="header-right"><span class="edition">THE NEIGHBORHOOD COLLECTION · NO. 01</span><button id="sound-button" class="icon-button" type="button" aria-label="Enable sound" aria-pressed="false"><span id="sound-icon" aria-hidden="true">♪</span><span id="sound-label">Sound off</span></button></div>
+    </header>
+    <section class="intro" aria-labelledby="game-title"><div><p class="eyebrow"><span></span> SMALL PAWS. BIG ADVENTURE.</p><h1 id="game-title">Good Dog <em>Dash.</em><span class="title-spark" aria-hidden="true">✳</span></h1><p class="subtitle">A little mischief. A lot of good dog energy.</p></div><div class="intro-note"><span class="note-paw" aria-hidden="true">♡</span><span>Your daily dose<br>of tail-wagging joy.</span></div></section>
+    <section id="game-shell" class="game-shell" aria-label="Good Dog Dash game">
+      <canvas id="game" tabindex="0" role="img" aria-label="Side-scrolling dog runner. Press Space or Up to jump. Hold Down to slide. Press P to pause."></canvas>
+      <div class="hud"><div class="location-tag"><span class="live-dot"></span><div><strong>MAPLE STREET</strong><span id="pace-label">A lovely day for a dash</span></div></div><div class="scoreboard"><div class="score-item"><span>SCORE</span><strong id="score">00000</strong></div><div class="score-item best"><span>PERSONAL BEST</span><strong id="best">00000</strong></div><span class="score-divider"></span><div class="collection"><span class="bone-icon" aria-hidden="true">🦴</span><strong id="bones">0</strong></div><button id="pause-button" class="pause-button" aria-label="Pause game" type="button" disabled>Ⅱ</button></div></div>
+      <div id="start-screen" class="overlay start-overlay"><div class="start-card"><span class="pill">MEET YOUR NEW RUNNING BUDDY</span><h2>Ready, set,<br><em>good dog!</em></h2><p>Chase the sunshine. Snag some snacks.<br>Keep those little paws out of trouble.</p><button id="start-button" class="primary-button" type="button">Let’s go! <span aria-hidden="true">↗</span></button><span class="start-hint">or press <kbd>SPACE</kbd> to start</span></div><div class="dog-caption"><span>that’s Biscuit!</span><svg width="71" height="46" viewBox="0 0 71 46" aria-hidden="true"><path d="M5 3 Q68 0 48 38 M38 28 L48 40 L60 29" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div></div>
+      <div id="pause-screen" class="overlay centered-overlay" hidden><div class="modal"><span class="pill">TAKE A BREATHER</span><h2>Paws for a moment.</h2><p>Biscuit will be right here.</p><button id="resume-button" class="primary-button" type="button">Keep running <span aria-hidden="true">→</span></button><span class="start-hint">press <kbd>P</kbd> or <kbd>ESC</kbd> to resume</span></div></div>
+      <div id="gameover-screen" class="overlay centered-overlay" hidden><div class="modal gameover-modal"><div class="result-badge" aria-hidden="true">♡</div><span id="result-eyebrow" class="eyebrow">ONE VERY GOOD RUN</span><h2 id="result-title">A little woof.<br>A big adventure.</h2><p id="result-message">Even the best pups need a pit stop.</p><div class="result-stats"><div><span>YOUR SCORE</span><strong id="final-score">0</strong></div><div><span>SNACKS FOUND</span><strong id="final-snacks">0</strong></div><div><span>BEST EVER</span><strong id="final-best">0</strong></div></div><button id="restart-button" class="primary-button" type="button">One more dash <span aria-hidden="true">↻</span></button><span class="start-hint">press <kbd>SPACE</kbd> to try again</span></div></div>
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+      <div id="power-hud" class="power-hud" aria-label="Active power-ups"></div>
+      <button id="fullscreen-button" class="fullscreen-button" type="button" aria-label="Enter fullscreen" aria-pressed="false">⛶ <span>Full screen</span></button>
+      <div id="customizer-screen" class="overlay customizer-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="customizer-title">
+        <div class="customizer-card">
+          <header class="customizer-header"><div><span class="eyebrow">YOUR DOG. YOUR ADVENTURE.</span><h2 id="customizer-title">Make it your dash.</h2></div><button id="close-customizer" class="close-button" aria-label="Close customization" type="button">×</button></header>
+          <div class="customizer-body">
+            <div class="preview-column"><canvas id="dog-preview" width="560" height="320" role="img" aria-label="Live preview of your customized dog"></canvas><strong id="preview-label">Biscuit the corgi</strong><span>All looks, same happy paws.<br>Every breed has identical abilities.</span><div class="wardrobe-record"><span>ALL-TIME BEST</span><strong id="wardrobe-best">0</strong><span id="lifetime-snacks">0 lifetime snacks</span></div></div>
+            <div class="customizer-options">
+              <fieldset><legend>01 · Pick your pup</legend><div class="option-row" id="breed-options"><button type="button" data-breed="corgi">Corgi</button><button type="button" data-breed="beagle">Beagle</button><button type="button" data-breed="poodle">Poodle</button></div></fieldset>
+              <fieldset><legend>02 · A coat of color</legend><div class="option-row swatches" id="color-options"><button type="button" data-color="honey" style="--swatch:#dca369" aria-label="Honey fur"></button><button type="button" data-color="cocoa" style="--swatch:#8b6551" aria-label="Cocoa fur"></button><button type="button" data-color="snow" style="--swatch:#e9e4d9" aria-label="Snow fur"></button><button type="button" data-color="slate" style="--swatch:#7e8c9c" aria-label="Slate fur"></button><button type="button" data-color="ginger" style="--swatch:#c8754b" aria-label="Ginger fur"></button></div></fieldset>
+              <fieldset><legend>03 · The finishing touch</legend><div class="option-row" id="accessory-options"><button type="button" data-accessory="none">Classic</button><button type="button" data-accessory="bandana">Bandana</button><button type="button" data-accessory="bow">Bow tie</button><button type="button" data-accessory="crown">Crown</button><button type="button" data-accessory="glasses">Sunnies</button></div></fieldset>
+              <fieldset><legend>04 · Somewhere lovely</legend><div id="environment-options" class="environment-options"></div><p id="unlock-progress" class="unlock-progress"></p></fieldset>
+            </div>
+          </div>
+          <footer class="customizer-footer"><span>Looks and progress save automatically.</span><button id="customizer-play" class="primary-button" type="button">Run with this pup <span>↗</span></button></footer>
+        </div>
+      </div>
+      <div class="scene-footer"><span id="world-motto"><span class="weather-icon" aria-hidden="true">☀</span> ALWAYS SUNNY IN BISCUIT’S WORLD</span><span id="distance">0 m explored</span></div>
+    </section>
+    <section class="controls-strip" aria-label="Game controls"><div class="control-guide"><span class="guide-title">HOW TO DASH</span><span class="control-item"><kbd>SPACE</kbd><span class="or">/</span><kbd>↑</kbd><span>Jump</span></span><span class="control-item"><kbd>↓</kbd><span>Hold to slide</span></span><span class="control-item"><kbd>P</kbd><span>Pause</span></span></div><span class="snack-tip"><span aria-hidden="true">✧</span> Bones +25 · Treats +75 · Good vibes, always.</span></section>
+    <div class="touch-controls"><button id="slide-button" type="button" aria-label="Hold to slide">↓ <span>SLIDE</span></button><button id="jump-button" type="button" aria-label="Jump">↑ <span>JUMP</span></button></div>
+    <footer class="page-footer"><span>Made for the joy of the run.</span><span>NO DOWNLOADS. JUST DOG.</span><span class="footer-heart">Stay curious. Stay pawsitive. ♡</span></footer>
+    <p id="announcer" class="sr-only" role="status" aria-live="polite"></p>
+    <noscript><p class="noscript">Please enable JavaScript to play Good Dog Dash.</p></noscript>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>

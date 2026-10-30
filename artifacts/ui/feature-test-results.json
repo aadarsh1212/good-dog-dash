@@ -1,0 +1,16 @@
+{
+  "passed": [
+    "Live preview: three distinct breeds, five fur colors, five accessories; locked destinations cannot be selected",
+    "Outfit persistence across reload; play with selected pup; Escape and focus restoration",
+    "Actual snack collection unlocks Clover Park at 15 and Sunset Boardwalk at 40; worlds and per-world/all-time best scores survive reload",
+    "Magnet pickup attracts distant elevated snacks and expires",
+    "Double-point pickup doubles bones, treats and time points; expires",
+    "Shield blocks exactly one hit, grants recovery, rescues pits and expires unused",
+    "Stacked power timers freeze during pause and reset on restart",
+    "Power-up scheduler emits real in-world pickups",
+    "Five generated pattern families clearable at early and maximum speed: fence-fence, fence-bird, pit-rock, bird-bird, bird-rock",
+    "Fullscreen enter/exit, safe auto-pause and browser-API rejection fallback",
+    "Mobile live customizer, selected-pup start, contained touch controls and undistorted portrait fullscreen rendering",
+    "No browser JavaScript exceptions"
+  ]
+}

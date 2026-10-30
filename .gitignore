@@ -1,0 +1,16 @@
+# Generated build and dependencies
+/dist/
+/node_modules/
+
+# Deployment-local configuration and credentials
+/.vercel/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local tooling / OS files
+.DS_Store
+*.log
+__pycache__/

@@ -1,0 +1,19 @@
+{
+  "passed": [
+    "Production UI: keyboard start, pause, frozen score, resume, and sound toggle",
+    "Jump: responsive input, apex, gravity, and landing",
+    "Hold and release slide",
+    "Fence, rock, pit and moving scooter clearance at three speeds",
+    "Moving pigeon: standing collision and slide clearance",
+    "Collectible bones +25 and treats +75",
+    "Game over, restart reset, and persistent best score",
+    "Gradual difficulty increase, maximum speed, and six levels",
+    "Coyote time and buffered landing jumps",
+    "Focus loss auto-pauses and clears held input",
+    "390 px responsive layout and touch start/jump/pause/resume",
+    "Reduced motion, blocked external fonts, unavailable local storage",
+    "Direct local HTML launch (no server or build required)",
+    "320, 768, and 1920 px layouts and unclipped game-over panels",
+    "No browser JavaScript exceptions"
+  ]
+}

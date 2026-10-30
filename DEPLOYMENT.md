@@ -6,36 +6,27 @@
 - Private GitHub repository: https://github.com/aadarsh1212/good-dog-dash
 - Vercel dashboard: https://vercel.com/orion-d52a/good-dog-dash
 - Vercel team: Orion (`orion-d52a`), Hobby plan.
-- Production deployment: `dpl_HRbBqwwV2Hi1XKr8xde1nPWwt43V`, READY.
+- Initial production deployment: `dpl_HRbBqwwV2Hi1XKr8xde1nPWwt43V`, READY.
 - Initial release was uploaded using the authenticated Vercel CLI, not a GitHub webhook.
 - Public production domains are accessible without Vercel sign-in; preview/deployment URLs retain Vercel Authentication.
 - [Public browser test results](artifacts/ui/vercel-test-results.json) verify HTTP 200, customization, start/pause, reload persistence, and no JavaScript exceptions.
 
-## Remaining: connect private GitHub repository
+## GitHub connection
 
-Vercel's project currently has no Git connection. The CLI connection attempt failed because the private repository is not yet accessible to Vercel. GitHub CLI authentication and Vercel CLI authentication are both complete; GitHub App repository access is separate.
+The private GitHub repository is now connected to Vercel. The connection command succeeded and the authenticated project API confirms:
 
-While signed in to GitHub as `aadarsh1212`:
+- Git provider: GitHub.
+- Repository: `aadarsh1212/good-dog-dash`.
+- Production branch: `main`.
+- GitHub App access: sufficient to connect the private repository.
 
-1. Open https://github.com/apps/vercel and choose **Install** or **Configure**.
-2. Choose the `aadarsh1212` account.
-3. Choose **Only select repositories**, then select **good-dog-dash**.
-4. Save or install the app. Enter any password/2FA prompt on GitHub, never in chat.
-5. If Vercel is already installed, find it under https://github.com/settings/installations, choose **Configure**, and add the repository.
-
-After access is approved, reconnect from this game directory:
-
-```sh
-vercel git connect https://github.com/aadarsh1212/good-dog-dash.git --yes --scope orion-d52a
-```
-
-Then verify the project Git link and a subsequent Git-push deployment before claiming automatic deployment is working. The live site does not depend on completing this integration.
+This documentation update is being pushed to verify the first automatic Git-triggered deployment. Build success is not implied by connection success; inspect the deployment associated with this commit before treating that verification as complete.
 
 ## Build and deployment
 
 [vercel.json](vercel.json) sets the framework to Other, runs [build.cjs](build.cjs), and serves the generated static `dist` directory. The build copies only the HTML, CSS, and browser JavaScript. Tests, screenshots, server scripts, credentials, and local configuration are not part of the public site. No runtime dependencies or environment variables are required.
 
-Local verification: `npm run build`. Direct production update while Git access remains unconfigured:
+Local verification: `npm run build`. Push commits to `main` for automatic production deployments. Direct CLI deployment is also available:
 
 ```sh
 vercel deploy --prod --yes --scope orion-d52a

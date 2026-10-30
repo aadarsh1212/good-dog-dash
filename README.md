@@ -6,7 +6,7 @@ A standalone 2D side-scrolling runner with a customizable cartoon dog. A warm pa
 
 **[Play the public game](https://good-dog-dash.vercel.app/)** · [GitHub repository](https://github.com/aadarsh1212/good-dog-dash) (private).
 
-The initial Vercel production deployment is live and browser-tested. Automatic deployment from GitHub is pending Vercel GitHub App repository access; see [deployment status and setup](DEPLOYMENT.md).
+The public Vercel deployment is live and browser-tested. The private GitHub repository is connected to Vercel with `main` as the production branch; see [deployment status and setup](DEPLOYMENT.md).
 
 Open [index.html](index.html) in a modern browser. No build, server, account, image downloads, or runtime package installation is required. The optional Google Fonts stylesheet falls back to local sans-serif fonts offline.
 
